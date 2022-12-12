@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
+
+Route::get('/teacher', [TeacherController::class,'index']);
+Route::get('/teacher/add_data',[TeacherController::class,'create']);
+Route::post('/teacher/add_data',[TeacherController::class,'store']);
+Route::get('/teacher/update_data/{id}',[TeacherController::class,'edit']);
+Route::put('/teacher/update_data/{id}',[TeacherController::class, 'update']);
+Route::get('/teacher/detail/{id}',[TeacherController::class,'show']);
+Route::delete('/teacher/destroy/{id}', [TeacherController::class, 'destroy']);
+
+Route::get('/student', [StudentController::class,'index']);
