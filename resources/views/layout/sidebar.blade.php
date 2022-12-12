@@ -1,20 +1,24 @@
 
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <a class="sidebar-brand brand-logo" href="index.html">STARBHAK</a>
-        <a class="sidebar-brand brand-logo-mini" href="index.html">S</a>
+        <a class="sidebar-brand brand-logo" id="titles" href="/">
+            <img src="{{asset('assets/images/LogoTB.png')}}" alt="">
+            SViolations
+        </a>
+        <a class="sidebar-brand brand-logo-mini" id="mini-titles" href="/">
+            <img src="{{asset('assets/images/LogoTB.png')}}" alt="">    
+        </a>
     </div>
     <ul class="nav">
         <li class="nav-item profile">
             <div class="profile-desc">
                 <div class="profile-pic">
                     <div class="count-indicator">
-                        <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
-                        <span class="count bg-success"></span>
+                        <iconify-icon  style="font-size: 42px" icon="ic:baseline-account-circle"></iconify-icon>
                     </div>
                     <div class="profile-name">
-                        <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
-                        <span>Gold Member</span>
+                        <h5 class="mb-0 font-weight-normal">Admin</h5>
+                        <span>Kesiswaan</span>
                     </div>
                 </div>
                 <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i
