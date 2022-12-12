@@ -30657,7 +30657,7 @@ table{
     color: white;
     text-decoration: none;
 }
-.nipd, .gender, .address, .lesson, .telp, .email, .pass, .class{
+.nipd, .gender, .address, .lesson, .telp, .email, .pass, .class, .point, .penalty{
     display: flex;
 }
 .nipd p{
@@ -30707,6 +30707,21 @@ table{
 }
 .class p:first-child{
     margin-right: 200px;
+}
+.point p{
+    font-size: 22px;
+}
+.point p:first-child{
+    margin-right: 200px;
+}
+.penalty p{
+    font-size: 22px;
+}
+.penalty p:first-child{
+    margin-right: 176px;
+}
+.penalty p:last-child{
+    width: 600px;
 }
 .datas{
     padding: 30px;

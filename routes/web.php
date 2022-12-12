@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\ViolationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +35,12 @@ Route::get('/student/detail/{id}',[StudentController::class,'show']);
 Route::get('/student/update_data/{id}',[StudentController::class,'edit']);
 Route::put('/student/update_data/{id}',[StudentController::class, 'update']);
 Route::delete('/student/destroy/{id}', [StudentController::class, 'destroy']);
+
+
+Route::get('/violations', [ViolationController::class,'index']);
+Route::get('/violations/detail/{id}',[ViolationController::class,'show']);
+Route::get('/violations/add_data',[ViolationController::class,'create']);
+Route::post('/violations/add_data',[ViolationController::class,'store']);
+Route::get('/violations/update_data/{id}',[ViolationController::class,'edit']);
+Route::put('/violations/update_data/{id}',[ViolationController::class, 'update']);
+Route::delete('/violations/destroy/{id}', [ViolationController::class, 'destroy']);
