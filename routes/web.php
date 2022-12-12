@@ -28,3 +28,9 @@ Route::get('/teacher/detail/{id}',[TeacherController::class,'show']);
 Route::delete('/teacher/destroy/{id}', [TeacherController::class, 'destroy']);
 
 Route::get('/student', [StudentController::class,'index']);
+Route::get('/student/add_data',[StudentController::class,'create']);
+Route::post('/student/add_data',[StudentController::class,'store']);
+Route::get('/student/detail/{id}',[StudentController::class,'show']);
+Route::get('/student/update_data/{id}',[StudentController::class,'edit']);
+Route::put('/student/update_data/{id}',[StudentController::class, 'update']);
+Route::delete('/student/destroy/{id}', [StudentController::class, 'destroy']);

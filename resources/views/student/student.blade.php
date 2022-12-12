@@ -8,7 +8,7 @@
       <div class="card-body">
           <div class="row-table">
             <h4 class="card-title">Student Table</h4>
-            <button type="button" class="btn btn-success btn-fw">Add New  [+]</button>
+            <a href="/student/add_data" class="btn btn-success btn-fw" style="margin: 10px; " >Add Student [+]</a>
         </div>
         <p class="card-description"> here's all the students data</p>
         <div class="table-responsive">
@@ -29,10 +29,10 @@
                 <td>{{$loop->iteration}}</td>
                 <td>{{$item->nisn}}</td>
                 <td>{{$item->name}}</td>
-                <td>{{$item->classes->name}}</td>
+                <td>{{$item->kelas ?? 'no data'}}</td>
                 <td></td>
                 <td>
-                  <a href=""  id="btn-details"class="btn btn-info">Detail</a>
+                  <a href="/student/detail/{{$item->id}}"id="btn-details"class="btn btn-info">Detail</a>
                 </td>
               </tr>
               @endforeach

@@ -25,7 +25,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        $student = student::all();
+        return view('student.student-create', ['student'=> $student]);
     }
 
     /**
@@ -36,7 +37,10 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        student::create($input);
+
+        return redirect('student');
     }
 
     /**
@@ -47,7 +51,8 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+        $student = student::findOrFail($id);
+        return view('student.student-show', ['student'=> $student]);
     }
 
     /**
@@ -58,7 +63,8 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $student = student::findOrFail($id);
+        return view('student.student-edit', ['student'=> $student]);
     }
 
     /**
@@ -70,7 +76,10 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $student = student::findOrFail($id);
+        $student->update($request->all());
+        
+        return redirect('student');
     }
 
     /**
@@ -81,6 +90,10 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $student = student::findorfail($id);
+        $student->delete();
+
+        return redirect('student')
+        ->with('success','student data has been deleted successfully');
     }
 }
