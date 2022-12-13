@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\kelas;
-use App\Models\teacher;
 use Illuminate\Http\Request;
 
-class TeacherController extends Controller
+class ViolationReportsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $teacher = teacher::with('homeroomTeacher')->get();
-        return view ('teacher.teacher',['teacher'=>$teacher]);
+        //
     }
 
     /**
@@ -26,9 +23,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        $teacher = teacher::all();
-        $kelas = kelas::all();
-        return view('teacher.teacher-create', compact('teacher','kelas'));
+        //
     }
 
     /**
@@ -39,10 +34,7 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        teacher::create($input);
-
-        return redirect('teacher.teacher');
+        //
     }
 
     /**
@@ -53,8 +45,7 @@ class TeacherController extends Controller
      */
     public function show($id)
     {
-        $datateacher = teacher::findOrFail($id);
-        return view('teacher.teacher-show', ['teacher'=> $datateacher]);
+        //
     }
 
     /**
@@ -65,9 +56,7 @@ class TeacherController extends Controller
      */
     public function edit($id)
     {
-        $teacher = teacher::findOrFail($id);
-        $kelas = kelas::all();
-        return view('teacher.teacher-edit', compact('teacher','kelas'));
+        //
     }
 
     /**
@@ -79,10 +68,7 @@ class TeacherController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $datateacher = teacher::findOrFail($id);
-        $datateacher->update($request->all());
-        
-        return redirect('teacher');
+        //
     }
 
     /**
@@ -93,10 +79,6 @@ class TeacherController extends Controller
      */
     public function destroy($id)
     {
-        $datateacher = teacher::findorfail($id);
-        $datateacher->delete();
-
-        return redirect('teacher')
-        ->with('success','student data has been deleted successfully');
+        //
     }
 }

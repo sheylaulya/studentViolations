@@ -55,7 +55,7 @@
     <label for="class" class="form-label">Class</label>
     <select name="classes_id" class="form-select mb-3"style="width: 70%"  id="">
         <option selected>Select Class</option>
-        @foreach ($dataclass as $item)
+        @foreach ($kelas as $item)
         <option  value="{{$item->id}}">{{$item->name}}</option>
         @endforeach
     </select>

@@ -55,10 +55,10 @@
     </div>
     <label for="class" class="form-label">Class</label>
     <select name="classes_id" class="form-select mb-3"style="width: 70%"  id="">
-        {{-- <option selected value="{{$teacher->classes_id}}">{{$teacher->classes->name}}</option>
-        @foreach ($class as $item)
+        <option selected value="{{$teacher->kelas_id}}">{{$teacher->homeroomTeacher->name}}</option>
+        @foreach ($kelas as $item)
         <option  value="{{$item->id}}">{{$item->name}}</option>
-        @endforeach --}}
+        @endforeach
     </select>
     <button type="submit" class="btn btn-dark">Submit</button>
 </form>

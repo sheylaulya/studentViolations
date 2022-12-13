@@ -47,7 +47,7 @@
     </div>
     <div class="class">
         <p>Class</p>
-        <p>{{ $teacher->classes->name ?? 'no data'}}</p>
+        <p>{{ $teacher->homeroomTeacher->name ?? 'no data'}}</p>
     </div>
     <div class="email">
         <p>email</p>
